@@ -1,0 +1,122 @@
+.header {
+  background-color: tranparent;
+  grid-column: col-start 1 / col-end 9;
+  grid-row: 1 / 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10rem;
+
+  z-index: 20;
+
+  &__logo {
+    height: 2.4rem;
+    width: auto;
+    margin-right: 16rem;
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    gap: 4rem;
+
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: $color-tertiary;
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: #555;
+    }
+
+    @media only screen and (max-width: $bp-medium-2) {
+      display: none;
+    }
+  }
+
+  &__end {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  &__btn {
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    background-color: $color-tertiary;
+    color: $color-primary;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    gap: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-medium-2) {
+      display: none;
+    }
+
+    &--ribbon {
+      display: block;
+      fill: $color-primary;
+      height: 2.4rem;
+      width: auto;
+    }
+
+    &--ribbon-full {
+      display: block;
+      fill: $color-primary;
+      height: 2.4rem;
+      width: auto;
+    }
+
+    &--ribbon-full.hidden,
+    &--ribbon.hidden {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    // display: block;
+    flex-direction: column;
+    align-items: flex-end;
+    border: none;
+    border-radius: 0;
+
+    background-color: $color-tertiary;
+    height: 2px;
+    width: 1rem;
+    border-radius: 100px;
+
+    &::before,
+    &::after {
+      background-color: $color-tertiary;
+      height: 2px;
+      width: 2rem;
+      content: "";
+      display: block;
+      border-radius: 100px;
+    }
+
+    &::before {
+      transform: translateY(-0.75rem);
+    }
+    &::after {
+      transform: translateY(0.55rem);
+    }
+
+    @media only screen and (max-width: $bp-medium-2) {
+      display: block;
+    }
+  }
+}

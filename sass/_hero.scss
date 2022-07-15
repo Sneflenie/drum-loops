@@ -1,0 +1,116 @@
+.hero {
+  background: $color-primary url(../img/background-shape.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 20% bottom 50%;
+  grid-column: col-start 1 / col-end 9;
+  grid-row: 1 / 3;
+  padding: 16rem 0rem 4rem;
+
+  display: grid;
+  //   grid-template-rows: max-content auto;
+  grid-template-columns: 70%;
+  grid-row-gap: 4rem;
+  justify-content: center;
+  text-align: center;
+
+  z-index: 1;
+
+  h3 {
+    justify-self: center;
+    max-width: 48rem;
+  }
+
+  &__search {
+    &-label {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 1.5rem;
+        top: -0.2rem;
+        bottom: 0rem;
+        width: 2rem;
+        background: url(../img/magnify.svg) center / contain no-repeat;
+      }
+    }
+    &-input {
+      border: 1px solid $color-tertiary;
+      border-radius: 0.4rem;
+      background-color: transparent;
+      padding: 1.2rem 4rem 1.2rem 4.8rem;
+      text-align: center;
+      font-family: inherit;
+      font-size: 1.6rem;
+      cursor: pointer;
+
+      &::placeholder {
+        color: $color-tertiary;
+      }
+
+      &:focus {
+        outline: none !important;
+        border: 1px solid $color-tertiary;
+        box-shadow: rgba(100, 100, 111, 0.15) 0px 0px 20px 5px;
+        transform: scale(1.1);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__magnify {
+    &-svg {
+      position: absolute;
+      height: 2.5rem;
+      top: 1.4rem;
+      left: 14.5rem;
+    }
+  }
+
+  &__genres {
+    list-style: none;
+    justify-self: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium-2) {
+      grid-template-columns: repeat(3, 1fr);
+      width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: auto;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      span {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+
+    &-img {
+      width: 10rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        // transform: translateY(-1rem);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

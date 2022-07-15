@@ -1,0 +1,51 @@
+// Colors
+$color-primary: #fbf4ef;
+$color-secondary: #f8eadc;
+$color-tertiary: #000000;
+
+// Font Sizes
+$heading-primary: 4.8rem;
+$paragraph: 1.6rem;
+
+// Break points
+$bp-large-1: 75em; // 1200px
+$bp-large-2: 60em; // 960px
+$bp-medium-1: 53.13em; // 850px
+$bp-medium-2: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large-1) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-tertiary;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: 9rem min-content min-content min-content;
+  grid-template-columns: repeat(
+    8,
+    [col-start] minmax(min-content, 14rem) [col-end]
+  );
+}
