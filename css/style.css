@@ -91,6 +91,27 @@ body {
     width: auto;
     cursor: pointer; }
 
+.heart-music-full,
+.heart-music,
+.ribbon-music,
+.ribbon-music-full {
+  height: 2rem;
+  flex-shrink: 0;
+  width: auto;
+  cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .heart-music-full,
+    .heart-music,
+    .ribbon-music,
+    .ribbon-music-full {
+      height: 4rem; } }
+
+.heart-music-full.hidden,
+.heart-music.hidden,
+.ribbon-music.hidden,
+.ribbon-music-full.hidden {
+  display: none; }
+
 .heading-1 {
   font-size: 6.4rem;
   color: #000000;
@@ -139,7 +160,8 @@ body {
           display: none; } }
   .footer__info {
     display: none;
-    height: 4rem; }
+    height: 4rem;
+    cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
       .footer__info {
         display: block; } }
@@ -214,20 +236,25 @@ body {
         .footer__end-svg {
           height: 4rem; } }
 
-.heart-svg-full {
+.heart-svg-full,
+.heart-svg,
+.ribbon-svg,
+.ribbon-svg-full {
   height: 3rem;
   flex-shrink: 0;
   width: auto;
   cursor: pointer; }
-
-.heart-svg {
-  height: 3rem;
-  flex-shrink: 0;
-  width: auto;
-  cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .heart-svg-full,
+    .heart-svg,
+    .ribbon-svg,
+    .ribbon-svg-full {
+      height: 4rem; } }
 
 .heart-svg-full.hidden,
-.heart-svg.hidden {
+.heart-svg.hidden,
+.ribbon-svg.hidden,
+.ribbon-svg-full.hidden {
   display: none; }
 
 .header {

@@ -99,3 +99,23 @@
     cursor: pointer;
   }
 }
+
+.heart-music-full,
+.heart-music,
+.ribbon-music,
+.ribbon-music-full {
+  height: 2rem;
+  flex-shrink: 0;
+  width: auto;
+  cursor: pointer;
+  @media only screen and (max-width: $bp-small) {
+    height: 4rem;
+  }
+}
+
+.heart-music-full.hidden,
+.heart-music.hidden,
+.ribbon-music.hidden,
+.ribbon-music-full.hidden {
+  display: none;
+}

@@ -48,6 +48,7 @@
   &__info {
     display: none;
     height: 4rem;
+    cursor: pointer;
 
     @media only screen and (max-width: $bp-small) {
       display: block;
@@ -157,21 +158,33 @@
   }
 }
 
-.heart-svg-full {
-  height: 3rem;
-  flex-shrink: 0;
-  width: auto;
-  cursor: pointer;
-}
+// .heart-svg-full,
+// .ribbon-svg-full {
+//   height: 3rem;
+//   flex-shrink: 0;
+//   width: auto;
+//   cursor: pointer;
+//   @media only screen and (max-width: $bp-small) {
+//     height: 4rem;
+//   }
+// }
 
-.heart-svg {
+.heart-svg-full,
+.heart-svg,
+.ribbon-svg,
+.ribbon-svg-full {
   height: 3rem;
   flex-shrink: 0;
   width: auto;
   cursor: pointer;
+  @media only screen and (max-width: $bp-small) {
+    height: 4rem;
+  }
 }
 
 .heart-svg-full.hidden,
-.heart-svg.hidden {
+.heart-svg.hidden,
+.ribbon-svg.hidden,
+.ribbon-svg-full.hidden {
   display: none;
 }
